@@ -381,6 +381,9 @@ em <- function(counts,
 
     delta <- Inf
     iter <- 1
+
+    deltas = vector('numeric', length(max_iter))
+
     while (iter <= max_iter & delta > eps){
         # Estimate pi
         Pi <- get_pi(Z, add = length(bg_set), add_to = 1)
@@ -414,12 +417,16 @@ em <- function(counts,
         }
         if (verbose) message(format(Sys.time(), "%H:%M:%S"), 
                              " iteration ", iter, "; delta = ", round(delta, 10))
-
+        
+        # Add to log
+        deltas[iter] = delta
+        
         # Update
         iter <- iter + 1
         Alpha_old <- Alpha
         Z_old <- Z
         Pi_old <- Pi
+
     }
 
     converged <- FALSE
@@ -441,7 +448,8 @@ em <- function(counts,
     ret <- list("params" = params, 
                 "llk" = llk, 
                 "converged" = converged, 
-                "cluster" = clust_max)
+                "cluster" = clust_max,
+                "deltas" = deltas)
     return(ret)
 }
 
@@ -526,6 +534,7 @@ run_em <- function(x,
                   model = model, 
                   threads = threads, 
                   verbose = verbose)
+    
     nclusters <- ncol(x@model$llk)
     if (verbose){
         message(format(Sys.time(), "%H:%M:%S"), " finished EM")
