@@ -270,3 +270,31 @@ plot_clust <- function(sce,
     else print(p)
 }
 
+#' Scatterplot of delta for each iteration
+#' 
+#' Features should be a column name from droplet_data
+#'
+#' @param sce An SCE object.
+#' @param eps Threshold for delta, plotted as dashed red line
+#' @param ret A logical specifying whether to return the ggplot object 
+#'  or just print it out.
+#'
+#' @return Nothing. If return=TRUE, then return a ggplot object
+#' @import ggplot2
+#' @export
+plot_deltas <- function(sce, 
+                       eps = 1e-4, 
+                       ret = FALSE){
+
+	testdat <- sce@model$deltas
+    testdat <- data.frame(iter = seq_along(testdat), delta = testdat)
+
+    p = ggplot(testdat, aes(x = iter, y = delta)) +
+            geom_point() +
+            geom_hline(yintercept = eps, linetype = 'dashed', color = 'red') +
+            theme_minimal() +
+            labs(x = 'Iteration', y = 'Delta')
+    
+    if (ret) return(p)
+    else print(p)
+}
