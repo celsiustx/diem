@@ -120,3 +120,15 @@ filter_genes <- function(x, cpm_thresh = 0, verbose = TRUE){
     return(x)
 }
 
+#' @export
+filter_genes_on_names = function(x, genes) {
+    all = x@counts@Dimnames[1]
+    keep = rep(TRUE, len(all[[1]]))
+    names(keep) = all[[1]]
+    keep[genes] = FALSE
+    x@gene_data[,"exprsd"] = keep
+
+    return(x)
+}
+
+
