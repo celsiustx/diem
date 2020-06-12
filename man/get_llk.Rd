@@ -4,8 +4,15 @@
 \alias{get_llk}
 \title{Get log likelihood}
 \usage{
-get_llk(counts, Alpha, droplets = NULL, sizes = NULL, model = "mltn",
-  threads = 1, verbose = FALSE)
+get_llk(
+  counts,
+  Alpha,
+  droplets = NULL,
+  sizes = NULL,
+  model = "mltn",
+  threads = 1,
+  verbose = FALSE
+)
 }
 \arguments{
 \item{counts}{A gene by droplet data matrix of read counts.}

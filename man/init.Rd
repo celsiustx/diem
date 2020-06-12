@@ -4,8 +4,16 @@
 \alias{init}
 \title{Initialize clusters}
 \usage{
-init(x, k_init = 20, nstart_init = 30, min_size_init = 10,
-  model = "mltn", seedn = 1, threads = 1, verbose = TRUE)
+init(
+  x,
+  k_init = 20,
+  nstart_init = 30,
+  min_size_init = 10,
+  model = "mltn",
+  seedn = 1,
+  threads = 1,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{x}{An SCE object.}

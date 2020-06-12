@@ -4,9 +4,17 @@
 \alias{plot_data}
 \title{Scatterplot of features from meta data or gene expression}
 \usage{
-plot_data(sce, feat_x = "total_counts", feat_y = "n_genes",
-  log_x = FALSE, log_y = FALSE, color = NULL, alpha = 0.1,
-  data_type = "test", ret = FALSE)
+plot_data(
+  sce,
+  feat_x = "total_counts",
+  feat_y = "n_genes",
+  log_x = FALSE,
+  log_y = FALSE,
+  color = NULL,
+  alpha = 0.1,
+  data_type = "test",
+  ret = FALSE
+)
 }
 \arguments{
 \item{sce}{An SCE object.}

@@ -4,8 +4,16 @@
 \alias{alpha_max_loo}
 \title{Maximize leave-one-out with respect to alpha}
 \usage{
-alpha_max_loo(counts, alpha0, clust_mem, weights, psc = 1e-10,
-  eps = 1e-04, max_iter = 10000, threads = 1)
+alpha_max_loo(
+  counts,
+  alpha0,
+  clust_mem,
+  weights,
+  psc = 1e-10,
+  eps = 1e-04,
+  max_iter = 10000,
+  threads = 1
+)
 }
 \arguments{
 \item{counts}{A gene by droplet sparse count matrix.}

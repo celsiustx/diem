@@ -4,8 +4,14 @@
 \alias{get_var_genes}
 \title{Get variable genes}
 \usage{
-get_var_genes(x, n_genes = 2000, lss = 0.3, droplets.use = NULL,
-  threads = 1, verbose = FALSE)
+get_var_genes(
+  x,
+  n_genes = 2000,
+  lss = 0.3,
+  droplets.use = NULL,
+  threads = 1,
+  verbose = FALSE
+)
 }
 \arguments{
 \item{x}{An SCE object.}

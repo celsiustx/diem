@@ -4,8 +4,7 @@
 \alias{get_alpha_mult}
 \title{Get MLE of multinomial alphas}
 \usage{
-get_alpha_mult(counts, Z, add = 0, add_to = 1, psc = 1e-10,
-  verbose = FALSE)
+get_alpha_mult(counts, Z, add = 0, add_to = 1, psc = 1e-10, verbose = FALSE)
 }
 \arguments{
 \item{counts}{A gene by droplet matrix}

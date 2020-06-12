@@ -4,8 +4,14 @@
 \alias{run_em}
 \title{Run EM}
 \usage{
-run_em(x, eps = 1e-04, max_iter = 300, model = "mltn", threads = 1,
-  verbose = TRUE)
+run_em(
+  x,
+  eps = 1e-04,
+  max_iter = 300,
+  model = "mltn",
+  threads = 1,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{x}{An SCE object.}

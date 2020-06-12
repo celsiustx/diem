@@ -4,8 +4,15 @@
 \alias{get_pcs}
 \title{Get PCs}
 \usage{
-get_pcs(x, min_genes = 200, n_var_genes = 2000, lss = 0.3,
-  threads = 1, n_pcs = 30, seedn = 1)
+get_pcs(
+  x,
+  min_genes = 200,
+  n_var_genes = 2000,
+  lss = 0.3,
+  threads = 1,
+  n_pcs = 30,
+  seedn = 1
+)
 }
 \arguments{
 \item{x}{An SCE object.}

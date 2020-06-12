@@ -4,8 +4,15 @@
 \alias{de_ttest_all}
 \title{Run a DE across clusters with Welch's t-test}
 \usage{
-de_ttest_all(counts, labels, normalize = TRUE, sf = 1,
-  p_thresh = 0.05, logfc_thresh = 0, p_method = "bonferroni")
+de_ttest_all(
+  counts,
+  labels,
+  normalize = TRUE,
+  sf = 1,
+  p_thresh = 0.05,
+  logfc_thresh = 0,
+  p_method = "bonferroni"
+)
 }
 \arguments{
 \item{counts}{Gene by droplet sparse matrix of expression data.}

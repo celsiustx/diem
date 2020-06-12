@@ -4,9 +4,18 @@
 \alias{get_alpha_dm}
 \title{Get MLE of alphas}
 \usage{
-get_alpha_dm(counts, Z, test_set, bg_set, eps = 1e-04,
-  max_iter_loo = 10000, psc = 1e-10, ignore = 1e-10, threads = 1,
-  verbose = FALSE)
+get_alpha_dm(
+  counts,
+  Z,
+  test_set,
+  bg_set,
+  eps = 1e-04,
+  max_iter_loo = 10000,
+  psc = 1e-10,
+  ignore = 1e-10,
+  threads = 1,
+  verbose = FALSE
+)
 }
 \arguments{
 \item{counts}{A gene by droplet matrix}

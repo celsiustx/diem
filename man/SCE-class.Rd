@@ -11,7 +11,7 @@ The SCE class
 \details{
 This class is used to store the expression data from a 
 single-cell RNA-seq experiment. It is the class that is used by 
-DIEM.
+DIEM. 
 
 Single Cell Expression object
 }

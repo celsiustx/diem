@@ -4,8 +4,14 @@
 \alias{plot_clust}
 \title{Scatterplot of cluster means for indicated variables}
 \usage{
-plot_clust(sce, feat_x = "score.debris", feat_y = "n_genes",
-  log_x = TRUE, log_y = FALSE, ret = FALSE)
+plot_clust(
+  sce,
+  feat_x = "score.debris",
+  feat_y = "n_genes",
+  log_x = TRUE,
+  log_y = FALSE,
+  ret = FALSE
+)
 }
 \arguments{
 \item{sce}{An SCE object.}

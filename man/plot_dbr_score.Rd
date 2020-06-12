@@ -4,8 +4,14 @@
 \alias{plot_dbr_score}
 \title{Scatterplot of debris score against feature}
 \usage{
-plot_dbr_score(sce, feature = "n_genes", log_y = TRUE, color = NULL,
-  alpha = 0.1, ret = FALSE)
+plot_dbr_score(
+  sce,
+  feature = "n_genes",
+  log_y = TRUE,
+  color = NULL,
+  alpha = 0.1,
+  ret = FALSE
+)
 }
 \arguments{
 \item{sce}{An SCE object.}

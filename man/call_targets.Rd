@@ -4,8 +4,14 @@
 \alias{call_targets}
 \title{Call clean droplets after running EM using percent debris}
 \usage{
-call_targets(x, thresh_score = 0.5, clusters = NULL, min_genes = 200,
-  droplets = NULL, verbose = TRUE)
+call_targets(
+  x,
+  thresh_score = 0.5,
+  clusters = NULL,
+  min_genes = 200,
+  droplets = NULL,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{x}{An SCE object.}
